@@ -1,0 +1,28 @@
+name: Ixjok
+
+services:
+  ixjok.database:
+    image: postgres:18-alpine3.22
+    container_name: Ixjok_Database
+    environment:
+      - POSTGRES_PASSWORD=${POST_PASS}
+      - POSTGRES_USER=${POST_USER}
+    ports:
+      - 5410:5432
+    volumes:
+      - ixjok:/var/lib/postgres
+    networks:
+      ixjok:
+        ipv4_address: 165.30.20.10
+
+volumes:
+  ixjok:
+    external: false
+
+networks:
+  ixjok:
+    internal: true
+    ipam:
+      config:
+        - subnet: 165.30.20.0/10
+          gateway: 165.30.20.0
