@@ -9,11 +9,13 @@ services:
       - POSTGRES_USER=${POST_USER}
     ports:
       - 5410:5432
+    expose:
+      - 5432
     volumes:
       - ixjok:/var/lib/postgres
     networks:
       ixjok:
-        ipv4_address: 165.30.20.10
+        ipv4_address: 200.0.20.0
 
 volumes:
   ixjok:
@@ -21,8 +23,8 @@ volumes:
 
 networks:
   ixjok:
-    internal: true
+    internal: false
     ipam:
       config:
-        - subnet: 165.30.20.0/10
-          gateway: 165.30.20.0
+        - subnet: 200.0.20.0/10
+          gateway: 200.0.20.10
