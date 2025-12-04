@@ -3,7 +3,7 @@ name: Ixjok
 services:
   ixjok.database:
     image: postgres:18-alpine3.22
-    container_name: Ixjok_Database
+    container_name: Ixjok-Database
     environment:
       - POSTGRES_PASSWORD=${POST_PASS}
       - POSTGRES_USER=${POST_USER}
