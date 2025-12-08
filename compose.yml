@@ -1,6 +1,18 @@
 name: Ixjok
 
 services:
+  ixjok.server:
+    container_name: Ixjok-Server:v1-alpine3.22
+    build:
+      context: ./
+      dockerfile: ./Ixjok.Server/Dockerfile
+    ports:
+      - 5411:5411
+    environment:
+      - CONNECTION=server=200.0.20.1;ports=5432;database=Ixjok;user id=${POST_USER};password=${POST_PASS};
+    networks:
+      ixjok:
+        ipv4_address: 200.0.20.1
   ixjok.database:
     image: postgres:18-alpine3.22
     container_name: Ixjok-Database
