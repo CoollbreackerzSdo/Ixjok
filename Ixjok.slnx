@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="Ixjok.Server/Ixjok.Server.csproj" />
   <Project Path="Ixjok.Tools/Ixjok.Tools.csproj" />
+  <Project Path="Ixjok.Web.Client/Ixjok.Web.Client.csproj" />
+  <Project Path="Ixjok.Web/Ixjok.Web.csproj" />
   <Project Path="Ixjok/Ixjok.csproj" />
 </Solution>
