@@ -18,11 +18,11 @@ services:
         ipv4_address: 200.0.0.2
     depends_on:
       - ixjok.database
-    develop:
-      watch:
-        - path: ./Ixjok.Server
-          action: rebuild
-          target: ./Ixjok.Server/
+    # develop:
+    #   watch:
+    #     - path: ./Ixjok.Server
+    #       action: rebuild
+    #       target: ./Ixjok.Server/
           # initial_sync: true
   ixjok.database:
     image: postgres:18-alpine3.22
