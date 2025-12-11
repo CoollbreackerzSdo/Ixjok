@@ -1,0 +1,8 @@
+services:
+  ixjok.server:
+    develop:
+        watch:
+          - path: ./Ixjok.Server
+            action: rebuild
+            target: ./Ixjok.Server/
+            # initial_sync: true
